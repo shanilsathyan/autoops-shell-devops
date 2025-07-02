@@ -15,18 +15,7 @@
 
 ---
 
-## 📁 Folder Structure
-
-├── monitor/
-│ ├── health_check.sh # Monitors service and restarts if down
-│ └── resource_check.sh # Monitors disk space
-├── deploy/
-│ ├── build_and_push.sh # Builds and pushes Docker image
-│ └── deploy_k8s.sh # (Optional) Updates Kubernetes deployment
-├── scripts/
-│ └── (Optional custom automation)
-├── Dockerfile # Simple NGINX web app
-├── index.html # Web app homepage
+<pre> ### 📁 Folder Structure ``` autoops-shell-devops/ ├── monitor/ │ ├── health_check.sh # Monitors service and restarts if down │ └── resource_check.sh # Monitors disk space ├── deploy/ │ ├── build_and_push.sh # Builds and pushes Docker image │ └── deploy_k8s.sh # (Optional) Updates Kubernetes deployment ├── scripts/ # (Optional) Custom automation scripts ├── Dockerfile # Simple NGINX web app └── index.html # Web app homepage ``` </pre>
 
 ## ⚙️ How to Use
 
