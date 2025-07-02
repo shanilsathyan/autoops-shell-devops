@@ -16,3 +16,31 @@
 ---
 
 ## 📁 Folder Structure
+
+├── monitor/
+│ ├── health_check.sh # Monitors service and restarts if down
+│ └── resource_check.sh # Monitors disk space
+├── deploy/
+│ ├── build_and_push.sh # Builds and pushes Docker image
+│ └── deploy_k8s.sh # (Optional) Updates Kubernetes deployment
+├── scripts/
+│ └── (Optional custom automation)
+├── Dockerfile # Simple NGINX web app
+├── index.html # Web app homepage
+
+## ⚙️ How to Use
+
+### 🖥️ Health Monitoring
+
+Run manually or schedule with cron:
+```bash
+./monitor/health_check.sh
+./monitor/resource_check.sh
+
+Add to crontab
+*/5 * * * * /full/path/monitor/health_check.sh
+*/10 * * * * /full/path/monitor/resource_check.sh
+
+🐳 Docker Build & Push
+Update with your DockerHub username in the script:
+./deploy/build_and_push.sh
